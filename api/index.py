@@ -27,6 +27,10 @@ def submit():
             print('Something went wrong:', err)
             return jsonify({'message': 'Something went wrong'}), 500
 
+@app.route('/home')
+def index():
+    return render_template('./home.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
